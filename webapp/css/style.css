@@ -1,0 +1,14 @@
+/* Enter your custom styles here */
+
+.titulo {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.titulo:hover {
+    color: tomato;
+}
+
+.sapUiNoMarginBottom {
+    font-size: 15px;
+}

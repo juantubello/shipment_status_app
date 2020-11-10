@@ -1,0 +1,33 @@
+<mvc:View controllerName="app.AppTest.controller.View1" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m" xmlns:l="sap.ui.layout">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="ACTUALIZACION DE TRANSPORTES" class="sapUiContentPadding">
+					<content>
+						<l:VerticalLayout class="sapUiContentPadding" width="100%">
+							<Label class="titulo" text="INGRESE N° DE TRANSPORTE" labelFor="input-a"/>
+							<SearchField maxLength="10" id="buscarTransporte" search="onSearch" placeholder="Buscar">
+								<layoutData><OverflowToolbarLayoutData maxWidth="300px" shrinkable="true" priority="NeverOverflow"/></layoutData>
+							</SearchField>
+							<ObjectStatus id="numeroTransporte" class="sapUiNoMarginBottom" title="TRANSPORTE" text="" active="true" state="Information"
+								press="handleStatusPressed"/>
+							<ObjectStatus id="estadoTransporte" class="sapUiNoMarginBottom" title="ESTADO" text="" active="true" state="Warning"
+								press="handleStatusPressed"/>
+							<Toolbar class="sapUiNoMargin" id="separador"></Toolbar>
+							<Label class="titulo" text="ACTUALIZAR ESTADO DE TRANSPORTE" labelFor="input-b"/>
+							<Select id="selectEstados" forceSelection="false" showSecondaryValues="true" items="{ path: '/estadosSet', sorter: { path: 'Estado' } }">
+								<core:ListItem key="{Estado}" text="{Descripcion}" additionalText="{Estado}"/>
+							</Select>
+							<Button id="botonActualizar" type="Accept" text="Confirmar" press="onPress" ariaDescribedBy="accept">
+								<layoutData>
+									<FlexItemData growFactor="1"/>
+								</layoutData>
+							</Button>
+						</l:VerticalLayout>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

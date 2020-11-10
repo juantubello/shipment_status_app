@@ -1,0 +1,25 @@
+<edmx:Edmx xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZSAPUI5_USERS_SRV" xml:lang="en" sap:schema-version="1">
+			<EntityType Name="users" sap:content-version="1">
+				<Key><PropertyRef Name="Id"/></Key><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="12" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Fish" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:sortable="false" sap:filterable="false"/><Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="30" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="estados" sap:content-version="1">
+				<Key><PropertyRef Name="Estado"/><PropertyRef Name="Descripcion"/></Key><Property Name="Estado" Type="Edm.String" Nullable="false" MaxLength="2" sap:label="" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Descripcion" Type="Edm.String" Nullable="false" MaxLength="60" sap:label="" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/></EntityType>
+			<ComplexType Name="Export"><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User Name" sap:creatable="false" sap:updatable="false"
+				sap:sortable="false" sap:filterable="false"/><Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Name 1" sap:creatable="false" sap:updatable="false"
+				sap:sortable="false" sap:filterable="false"/><Property Name="Fish" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:creatable="false" sap:updatable="false"
+				sap:sortable="false" sap:filterable="false"/></ComplexType>
+			<ComplexType Name="Import"><Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="User Name" sap:creatable="false" sap:updatable="false"
+				sap:sortable="false" sap:filterable="false"/><Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Name 1" sap:creatable="false" sap:updatable="false"
+				sap:sortable="false" sap:filterable="false"/><Property Name="Fish" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:creatable="false" sap:updatable="false"
+				sap:sortable="false" sap:filterable="false"/></ComplexType>
+			<ComplexType Name="Zsapui5Users"><Property Name="Mode" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Char01" sap:creatable="false" sap:updatable="false"
+				sap:sortable="false" sap:filterable="false"/></ComplexType>
+			<EntityContainer Name="ZSAPUI5_USERS_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="usersSet" EntityType="ZSAPUI5_USERS_SRV.users" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/><EntitySet Name="estadosSet" EntityType="ZSAPUI5_USERS_SRV.estados" sap:creatable="false" sap:updatable="false" sap:deletable="false"
+				sap:pageable="false" sap:content-version="1"/></EntityContainer><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="./sap/ZSAPUI5_USERS_SRV/$metadata"/><atom:link xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="./sap/ZSAPUI5_USERS_SRV/$metadata"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
