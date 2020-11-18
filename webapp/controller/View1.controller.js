@@ -90,7 +90,7 @@ sap.ui.define([
 					}
 				},
 				error: function (err) {
-					Mt.show("Error actualizando transporte.");
+					Mt.show("Error actualizando transporte");
 				}
 			});
 
