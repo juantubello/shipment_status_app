@@ -3,7 +3,7 @@
 
 - The backend stuff was made in SAP system, using ABAP programming language I code the RFC's where I manage to do the CRUD operations also I created the OData service and publish it, to be able to call it in the frontend.
 
-- The frontend was all made in Javascript, using the official SAPUI5 libraries.
+- The frontend was all made in HTML | CSS | Javascript, using the official SAPUI5 libraries.
 
 ## Functionality 
 
